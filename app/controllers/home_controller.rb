@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    # binding.pry
     @up = Up.last
     @up_money = ((@up.money + 1).to_f)/100
   end
@@ -9,6 +8,7 @@ class HomeController < ApplicationController
     name = params[:name]
     money = params[:money].to_i
     declaration = params[:declaration]
+
     if money > up.money
 
       amount = money * 100
@@ -29,7 +29,7 @@ class HomeController < ApplicationController
       end
 
     else
-      render root_path
+      render :root
     end
     #binding.pry
     redirect_to root_path
