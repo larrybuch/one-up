@@ -1,4 +1,4 @@
-<%= form_tag do  %>
+<%= form_tag '/up' do  %>
 
   <div class="field">
     <%= label_tag :name %>
@@ -13,6 +13,7 @@
   <div class="field">
     <%= label_tag :money %>
     $<%= number_field_tag :money %>
+    <%= hidden_field_tag 'token' %>
     <span>Current Price To One Up: <%= number_to_currency(@up_money) %></span>
   </div>
 
@@ -20,6 +21,8 @@
     <%#= f.label :twitter_url %>
     <%#= f.text_field :twitter_url %>
   </div> -->
+
+  <script src="https://button.stripe.com/v1/button.js" class="stripe-button" data-key="<%= STRIPE_PUB %>"></script>
 
   <div class="actions">
     <%= submit_tag "One Up Them" %>
