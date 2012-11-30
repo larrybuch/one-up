@@ -63,6 +63,11 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.3.1)
+    pry (0.9.10-x86-mingw32)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.3.1)
+      win32console (~> 1.3)
     pry-rails (0.2.2)
       pry (>= 0.9.10)
     rack (1.4.1)
@@ -103,6 +108,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.6-x86-mingw32)
     stripe (1.7.8)
       multi_json (>= 1.0.4, < 2)
       rest-client (~> 1.4)
@@ -115,6 +121,7 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    win32console (1.3.2-x86-mingw32)
 
 PLATFORMS
   ruby
@@ -125,7 +132,9 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   pg
+  pry-rails
   rails (= 3.2.9)
   sass-rails (~> 3.2.3)
+  sqlite3
   stripe
   uglifier (>= 1.0.3)
