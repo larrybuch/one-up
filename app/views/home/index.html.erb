@@ -1,31 +1,33 @@
-<h4>mad?</h4>
+<div id="declaration">
+  <h1>ONE UP ME, bro.</h1>
+</div>
 
-<h1>ONE UP ME, bro.</h1>
+<div class="form">
+  <%= form_for(@up) do |f| %>
 
-<%= form_for(@up) do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <div class="field">
+      <%= f.label :declaration %>
+      <%= f.text_field :declaration %>
+    </div>
 
-  <div class="field">
-    <%= f.label :declaration %>
-    <%= f.text_field :declaration %>
-  </div>
+    <div class="field">
+      <%= f.label :money %>
+      <%= f.file_field :money %>
+    </div>
 
-  <div class="field">
-    <%= f.label :money %>
-    <%= f.file_field :money %>
-  </div>
+  <!-- Saving this for ALPHA!  <div class="field">
+      <%#= f.label :twitter_url %>
+      <%#= f.file_field :twitter_url %>
+    </div> -->
 
-<!-- Saving this for ALPHA!  <div class="field">
-    <%#= f.label :twitter_url %>
-    <%#= f.file_field :twitter_url %>
-  </div> -->
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-
-<% end %>
+  <% end %>
+</div>
