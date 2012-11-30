@@ -1,7 +1,7 @@
 $(function() {
   $('div.form').hide();
   $('.stripe-button').bind('token', token_generated);
-  $('span#show-form').click(toggleForm);
+  $('div#show-form').click(toggleForm);
 });
 
 function token_generated (e, token) {

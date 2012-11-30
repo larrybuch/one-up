@@ -1,35 +1,9 @@
 <div id="declaration">
-  <h1>ONE UP ME, bro.</h1>
+  <h1><%= @up.declaration %></h1>
 </div>
+<div class="user"><%= @up.name %></div>
 
-<span id="show-form">One Up Them</span>
-
+<div id="show-form">One Up Them</div>
 <div class="form">
-  <%= form_for(@up) do |f| %>
-
-    <div class="field">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= f.label :declaration %>
-      <%= f.text_field :declaration %>
-    </div>
-
-    <div class="field">
-      <%= f.label :money %>
-      <%= f.file_field :money %>
-    </div>
-
-  <!-- Saving this for ALPHA!  <div class="field">
-      <%#= f.label :twitter_url %>
-      <%#= f.file_field :twitter_url %>
-    </div> -->
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-
-  <% end %>
+  <%= render 'form' %>
 </div>

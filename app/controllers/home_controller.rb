@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
+    # binding.pry
     @up = Up.last
+    @up_money = ((@up.money + 1).to_f)/100
   end
   def create
     up = Up.last

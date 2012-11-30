@@ -1,0 +1,28 @@
+<%= form_tag do  %>
+
+  <div class="field">
+    <%= label_tag :name %>
+    <%= text_field_tag :name %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :declaration %>
+    <%= text_field_tag :declaration %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :money %>
+    <%= number_field_tag :money %>
+    <span>Current Price To One Up: <%= number_to_currency(@up_money) %></span>
+  </div>
+
+<!-- Saving this for ALPHA!  <div class="field">
+    <%#= f.label :twitter_url %>
+    <%#= f.text_field :twitter_url %>
+  </div> -->
+
+  <div class="actions">
+    <%= submit_tag "One Up Them" %>
+  </div>
+
+<% end %>
