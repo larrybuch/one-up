@@ -3,8 +3,14 @@ class HomeController < ApplicationController
     @up = Up.last
   end
   def create
-    @name = params[:name]
-    @money = params[:money]
-    @declaration = params[:declaration]
+    up = Up.last
+    name = params[:name]
+    money = params[:money].to_i
+    declaration = params[:declaration]
+    if @money > up.money
+      newup = Up.create(:name => name, :money => money, :declaration => declaration)
+    else
+      render root_path
+    end
   end
 end

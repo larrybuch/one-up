@@ -1,4 +1,4 @@
-Ups.delete_all
+Up.delete_all
 
-u1 = Ups.create(:declaration => "What's good?", :name => "Duck", :money => 100)
+u1 = Up.create(:declaration => "What's good?", :name => "Duck", :money => 100)
 
