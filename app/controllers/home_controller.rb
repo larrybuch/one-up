@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    binding.pry
     @up = Up.last
   end
   def create
