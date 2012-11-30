@@ -17,4 +17,5 @@ class Up < ActiveRecord::Base
   validates :money, :presence => true
   validates :money, :numericality => true
   validates :money, :numericality => { :greater_than => Up.last.money }
+  profanity_filter! :name, :declaration
 end

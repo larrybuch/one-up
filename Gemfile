@@ -11,6 +11,7 @@ gem 'stripe'
 gem 'pg'
 gem 'annotate'
 gem 'pry-rails'
+gem 'profanity_filter'
 
 # Gems used only for assets and not required
 # in production environments by default.
