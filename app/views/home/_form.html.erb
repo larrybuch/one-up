@@ -12,7 +12,7 @@
 
   <div class="field">
     <%= label_tag :money %>
-    <%= number_field_tag :money %>
+    $<%= number_field_tag :money %>
     <span>Current Price To One Up: <%= number_to_currency(@up_money) %></span>
   </div>
 
