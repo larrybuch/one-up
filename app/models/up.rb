@@ -16,5 +16,5 @@ class Up < ActiveRecord::Base
   validates :name, :presence => true
   validates :money, :presence => true
   validates :money, :numericality => true
-  validates :money, :numbericality => { :greater_than => Up.last.money }
+  validates :money, :numericality => { :greater_than => Up.last.money }
 end
