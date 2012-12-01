@@ -5,8 +5,8 @@ $(function() {
 });
 
 function token_generated (e, token) {
-  $('#stripe-form input[type="hidden"]').val(token.id);
-  $('#stripe-form').submit();
+  $('#show-form input[type="hidden"]').val(token.id);
+  $('#show-form').submit();
 }
 
 function toggleForm () {

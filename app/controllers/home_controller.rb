@@ -13,11 +13,10 @@ class HomeController < ApplicationController
 
       amount = money * 100
       # times 100 because in cents
-      token = params[:token]
+      token = params[:stripeToken]
 
       begin
         newup = Up.create(:name => name, :money => money, :declaration => declaration)
-        #binding.pry
         @stripe = Stripe::Charge.create(
           :amount => amount,
           :card => token,
@@ -27,7 +26,6 @@ class HomeController < ApplicationController
       rescue => e
         @error = e.message
       end
-
     else
       render :root
     end

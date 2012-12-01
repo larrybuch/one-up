@@ -11,3 +11,18 @@ h1
 div#show-form {
   cursor: pointer;
 }
+
+#declaration{
+  text-align: center;
+}
+
+.user:before {
+  content: "-"
+}
+
+footer{
+  bottom: 5px;
+  position: absolute;
+  text-align: center;
+  width: 92%;
+}
