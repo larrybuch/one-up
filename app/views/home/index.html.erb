@@ -1,16 +1,29 @@
-<div class="container_12">
-  <div id="declaration" class="grid_12">
-    <h1><%= @up.declaration %></h1>
-  </div>
-  <div class="user"><%= @up.name %></div>
+<div id="container">
 
-  <div id="show-form">One Up Them</div>
-  <div class="form">
-    <%= render 'form' %>
+  <div class="row" id="special">
+    <div id="declaration" class="twelve columns">
+      <h1 id="fittext"><%= @up.declaration %></h1>
+    </div>
   </div>
 
-  <footer>
-    Crafted at <a href="http://generalassemb.ly">General Assembly</a> by <a href="#">Adrian</a>, <a href="http://dcoates.com">Dustin</a>, <a href="#">Jon</a>, <a href="#">Larry</a>, and you.
-  </footer>
+  <div class="row">
+    <div class="four columns offset-by-four">
+      <div class="user"><%= @up.name %></div>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="four columns offset-by-four">
+      <div id="show-form">one up <%=@up.name %></div>
+      <div class="twelve columns" id="entry">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <footer>
+      Crafted at <a href="http://generalassemb.ly">General Assembly</a> by <a href="#">Adrian</a>, <a href="http://dcoates.com">Dustin</a>, <a href="#">Jon</a>, <a href="#">Larry</a>, and you.
+    </footer>
+  </div>
 </div>

@@ -1,20 +1,37 @@
 <%= form_tag '/up' do  %>
 
-  <div class="field">
-    <%= label_tag :name %>
-    <%= text_field_tag :name %>
+  <div class="row">
+    <div class="twelve columns">
+      <%= text_field_tag :declaration, nil, :placeholder => 'What do you want to say?' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= label_tag :declaration %>
-    <%= text_field_tag :declaration %>
+  <div class="row">
+    <div class="three columns">
+      <%= label_tag :name, nil, :class => "right inline" %>
+    </div>
+    <div class="nine columns">
+      <%= text_field_tag :name %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= label_tag :money %>
-    $<%= number_field_tag :money %>
-    <%= hidden_field_tag 'token' %>
-    <span>Current Price To One Up: <%= number_to_currency(@up_money) %></span>
+  <div class="row">
+    <div class="twelve columns">
+      Current Price To One Up: <%= number_to_currency(@up_money) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="twelve columns">
+      <div class="row collapse">
+        <div class="two mobile-one columns">
+          <span class="prefix">$</span>
+        </div>
+        <div class="ten mobile-three columns">
+          <%= number_field_tag :money %>
+        </div>
+        <%= hidden_field_tag 'token' %>
+      </div>
   </div>
 
 <!-- Saving this for ALPHA!  <div class="field">
@@ -22,10 +39,15 @@
     <%#= f.text_field :twitter_url %>
   </div> -->
 
-  <script src="https://button.stripe.com/v1/button.js" class="stripe-button" data-key="<%= STRIPE_PUB %>"></script>
-
-  <div class="actions">
-    <%= submit_tag "One Up Them" %>
+  <div class="row">
+    <div class="six columns">
+      <script src="https://button.stripe.com/v1/button.js" class="stripe-button" data-key="<%= STRIPE_PUB %>"></script>
+    </div>
+    <div class="six columns">
+      <div class="actions">
+        <%= submit_tag "One Up Them" %>
+      </div>
+    </div>
   </div>
 
 <% end %>

@@ -1,7 +1,9 @@
 $(function() {
-  $('div.form').hide();
+  $('#entry').hide();
   $('.stripe-button').bind('token', token_generated);
   $('div#show-form').click(toggleForm);
+  $('#fittext').fitText(0.6);
+  $('#fittext2').fitText(1.5);
 });
 
 function token_generated (e, token) {
@@ -10,5 +12,5 @@ function token_generated (e, token) {
 }
 
 function toggleForm () {
-  $('div.form').toggle();
+  $('#entry').slideToggle();
 }
