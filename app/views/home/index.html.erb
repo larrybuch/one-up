@@ -7,23 +7,24 @@
   </div>
 
   <div class="row">
-    <div class="four columns offset-by-four">
-      <div class="user"><%= @up.name %></div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="four columns offset-by-four">
-      <div id="show-form">one up <%=@up.name %></div>
-      <div class="twelve columns" id="entry">
-        <%= render 'form' %>
+    <div class="four columns centered">
+      <div class="user">
+        <h5>- <%= @up.name %></h5>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <footer>
-      Crafted at <a href="http://generalassemb.ly">General Assembly</a> by <a href="#">Adrian</a>, <a href="http://dcoates.com">Dustin</a>, <a href="#">Jon</a>, <a href="#">Larry</a>, and you.
-    </footer>
+    <div class="four columns offset-by-four">
+        <a href= "#modal" class="second" id="show-form">one up <%=@up.name %></a>
+    </div>
   </div>
+
 </div>
+
+<div id="modal" style="display:none">
+    <%= render 'form' %>
+    <p>Crafted at <a href="http://generalassemb.ly">General Assembly</a> by <a href="#">Adrian</a>, <a href="http://dcoates.com">Dustin</a>, <a href="#">Jon</a>, <a href="#">Larry</a>, and you.</p>
+    <a href="javascript:$.pageslide.close()">Close</a>
+</div>
+

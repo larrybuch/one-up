@@ -1,5 +1,6 @@
 /*
  *= require_self
  *= require 'foundation.min.css'
- *= require 'home'
+ *= require 'jquery.pageslide.css'
+ *= require 'home.css.scss'
  */

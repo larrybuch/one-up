@@ -19,9 +19,8 @@ h1 {
   letter-spacing: -0.25%;
 }
 
-h2 {
+h5 {
   font-size: 100%;
-  display: block;
   margin: 5% auto 5%;
   color: $gray;
 }
@@ -61,13 +60,10 @@ h2 {
   margin: 0px auto;
 }
 
-.user:before {
-  content: "- "
-}
-
 #entry {
   text-align: center;
 }
+
 .stripe-button {
   margin: 0.5em, auto;
 }
